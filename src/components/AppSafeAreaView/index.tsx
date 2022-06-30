@@ -8,13 +8,6 @@ type Props = {
   style?: ViewStyle;
 };
 
-const players = {
-  FWD: [null, null, null],
-  MID: [null, null, null],
-  DEF: [null, null, null, null],
-  GKC: [null],
-};
-
 const Screen = ({children, style}: PropsWithChildren<Props>) => {
   return (
     <SafeAreaView style={[styles.screen, style]}>
