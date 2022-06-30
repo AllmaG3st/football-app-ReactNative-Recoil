@@ -8,7 +8,7 @@ type Props = {
   style?: ViewStyle;
 };
 
-const Screen = ({children, style}: PropsWithChildren<Props>) => {
+const Screen = ({children = null, style = {}}: PropsWithChildren<Props>) => {
   return (
     <SafeAreaView style={[styles.screen, style]}>
       <View style={[styles.container, style]}>{children}</View>

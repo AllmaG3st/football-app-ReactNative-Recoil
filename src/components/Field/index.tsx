@@ -1,15 +1,13 @@
 import {View, Text, ImageBackground} from 'react-native';
 import React from 'react';
 
-//@ts-ignore
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import FieldPlayer from './FieldPlayer';
 
 //@ts-ignore
 import field from 'assets/images/field.jpg';
-import {COLORS} from 'constants/Colors';
 import styles from './styles';
 
-type PlayersType = {
+export type PlayersType = {
   [key: string]: null[];
 };
 
@@ -33,24 +31,7 @@ const Field = (props: Props) => {
             width: '100%',
           }}>
           {players[position].map(player => (
-            <View style={{alignItems: 'center'}}>
-              <Icon
-                name="tshirt"
-                size={35}
-                color={player ? COLORS.player : COLORS.existing}
-              />
-              <Text
-                style={{
-                  backgroundColor: COLORS.existing,
-                  color: COLORS.white,
-                  fontWeight: 'bold',
-                  fontSize: 12,
-                  padding: 2,
-                  paddingHorizontal: 7,
-                }}>
-                {position}
-              </Text>
-            </View>
+            <FieldPlayer {...{position, player}} />
           ))}
         </View>
       ))}

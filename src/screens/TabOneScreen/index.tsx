@@ -1,16 +1,25 @@
-import {View, Text, ImageBackground} from 'react-native';
+import {View, Text, ImageBackground, Pressable} from 'react-native';
 import React from 'react';
 
-import {AppSafeAreaView, Field} from 'components';
+import {AppButton, AppSafeAreaView, Field} from 'components';
 
 import styles from './styles';
+import {COLORS} from 'constants/Colors';
 
 type Props = {};
 
 const TabOneScreen = (props: Props) => {
+  const viewPlayers = () => {};
+
   return (
     <AppSafeAreaView style={styles.container}>
       <Field />
+
+      <AppButton
+        onPress={viewPlayers}
+        title="View Players"
+        backgroundColor={COLORS.orange}
+      />
     </AppSafeAreaView>
   );
 };

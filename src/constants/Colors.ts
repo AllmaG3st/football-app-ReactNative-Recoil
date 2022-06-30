@@ -1,5 +1,6 @@
 export const enum COLORS {
+  grey = '#5c5c5cbb',
+  purple = '#d170db',
   white = '#ffffff',
-  player = '#d170db',
-  existing = '#5c5c5cbb',
+  orange = '#FFA500',
 }
