@@ -14,7 +14,7 @@ type Props = {
   onPress: () => void;
   textColor?: string;
   title: string;
-  pressableStyles?: ViewStyle;
+  buttonStyles?: ViewStyle;
   textStyles?: TextStyle;
   props?: PressableProps;
 };
@@ -24,15 +24,15 @@ const AppButton = ({
   onPress = () => {},
   textColor = '#000',
   title = '',
-  pressableStyles,
-  textStyles,
+  buttonStyles = {},
+  textStyles = {},
   props,
 }: Props) => {
   return (
     <Pressable
       onPress={onPress}
       {...props}
-      style={[styles.button, pressableStyles, {backgroundColor}]}>
+      style={[styles.button, buttonStyles, {backgroundColor}]}>
       <Text style={[styles.buttonText, textStyles, {color: textColor}]}>
         {title}
       </Text>

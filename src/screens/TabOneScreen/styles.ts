@@ -12,10 +12,6 @@ export default StyleSheet.create({
     flex: 1,
   },
   viewPlayersButton: {
-    backgroundColor: COLORS.orange,
-    marginVertical: 20,
-    padding: 10,
-    alignItems: 'center',
-    borderRadius: 50,
+    marginTop: 'auto',
   },
 });

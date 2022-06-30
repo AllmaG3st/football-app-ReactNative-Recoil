@@ -19,6 +19,7 @@ const TabOneScreen = (props: Props) => {
         onPress={viewPlayers}
         title="View Players"
         backgroundColor={COLORS.orange}
+        buttonStyles={styles.viewPlayersButton}
       />
     </AppSafeAreaView>
   );
