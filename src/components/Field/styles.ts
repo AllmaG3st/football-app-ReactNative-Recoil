@@ -20,4 +20,9 @@ export default StyleSheet.create({
     padding: 2,
     paddingHorizontal: 7,
   },
+  positionContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+  },
 });

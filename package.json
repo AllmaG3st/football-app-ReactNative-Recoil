@@ -11,8 +11,11 @@
     "postinstall": "npx typesync"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^4",
     "react": "18.0.0",
     "react-native": "0.69.0",
+    "react-native-gesture-handler": "^2.5.0",
+    "react-native-reanimated": "^2.9.0",
     "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {

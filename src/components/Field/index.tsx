@@ -23,15 +23,10 @@ type Props = {};
 const Field = (props: Props) => {
   return (
     <ImageBackground source={field} resizeMode="contain" style={styles.bgImage}>
-      {Object.keys(players).map(position => (
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            width: '100%',
-          }}>
-          {players[position].map(player => (
-            <FieldPlayer {...{position, player}} />
+      {Object.keys(players).map((position, index) => (
+        <View style={styles.positionContainer} key={index}>
+          {players[position].map((player, index) => (
+            <FieldPlayer {...{position, player}} key={index} />
           ))}
         </View>
       ))}
