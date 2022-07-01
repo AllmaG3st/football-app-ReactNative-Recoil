@@ -1,7 +1,7 @@
 import {View, Text, ImageBackground, Pressable} from 'react-native';
 import React from 'react';
 
-import {AppButton, AppSafeAreaView, Field} from 'components';
+import {AppButton, AppSafeAreaView, Field, TeamStats} from 'components';
 
 import styles from './styles';
 import {COLORS} from 'constants/Colors';
@@ -13,6 +13,7 @@ const TabOneScreen = (props: Props) => {
 
   return (
     <AppSafeAreaView style={styles.container}>
+      <TeamStats />
       <Field />
 
       <AppButton

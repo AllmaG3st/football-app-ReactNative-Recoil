@@ -10,6 +10,7 @@ export default StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor: COLORS.primaryGreen,
   },
   viewPlayersButton: {
     marginTop: 'auto',
