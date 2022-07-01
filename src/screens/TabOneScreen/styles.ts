@@ -12,6 +12,9 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.primaryGreen,
   },
+  contentContainer: {
+    flex: 1,
+  },
   viewPlayersButton: {
     marginTop: 'auto',
   },

@@ -1,6 +1,6 @@
 import {Text, View} from 'react-native';
 import React, {useMemo, useRef} from 'react';
-import BottomSheet from '@gorhom/bottom-sheet';
+import BottomSheet, {BottomSheetFlatList} from '@gorhom/bottom-sheet';
 
 import {
   AppButton,
@@ -14,6 +14,7 @@ import {players} from 'assets/data/players';
 
 import {COLORS} from 'constants/Colors';
 import styles from './styles';
+import BottomSheetContent from './BottomSheetContent';
 
 type Props = {};
 
@@ -44,9 +45,7 @@ const TabOneScreen = (props: Props) => {
         index={-1}
         snapPoints={snapPoints}
         enablePanDownToClose>
-        <View>
-          <PlayerListItem player={players[0]} />
-        </View>
+        <BottomSheetContent />
       </BottomSheet>
     </>
   );
