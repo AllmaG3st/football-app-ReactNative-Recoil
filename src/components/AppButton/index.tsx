@@ -5,7 +5,7 @@ import {
   PressableProps,
   TextStyle,
 } from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 
 import styles from './styles';
 
@@ -40,4 +40,4 @@ const AppButton = ({
   );
 };
 
-export default AppButton;
+export default memo(AppButton);

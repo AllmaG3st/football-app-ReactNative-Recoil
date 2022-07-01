@@ -8,6 +8,9 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
+  filterButtonContainer: {
+    marginHorizontal: 20,
+  },
   container: {
     flex: 1,
     backgroundColor: COLORS.primaryGreen,
@@ -17,5 +20,6 @@ export default StyleSheet.create({
   },
   viewPlayersButton: {
     marginTop: 'auto',
+    marginHorizontal: 15,
   },
 });
