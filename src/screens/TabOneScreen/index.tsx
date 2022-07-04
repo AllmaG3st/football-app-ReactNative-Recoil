@@ -4,6 +4,7 @@ import BottomSheet from '@gorhom/bottom-sheet';
 
 import {AppButton, AppSafeAreaView, Field, TeamStats} from 'components';
 import PlayersBottomSheetContent from './PlayersBottomSheetContent';
+import FilterBottomSheetContent from './FilterBottomSheetContent';
 
 import {COLORS} from 'constants/Colors';
 import styles from './styles';
@@ -53,58 +54,7 @@ const TabOneScreen = (props: Props) => {
         index={-1}
         snapPoints={snapPoints}
         enablePanDownToClose>
-        <View
-          style={{
-            flexDirection: 'row',
-            width: '100%',
-            justifyContent: 'space-between',
-            padding: 10,
-          }}>
-          <View
-            style={{
-              backgroundColor: COLORS.greyLight,
-              width: 50,
-              height: 50,
-              borderRadius: 25,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text>FWD</Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: COLORS.greyLight,
-              width: 50,
-              height: 50,
-              borderRadius: 25,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text>MID</Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: COLORS.greyLight,
-              width: 50,
-              height: 50,
-              borderRadius: 25,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text>DEF</Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: COLORS.greyLight,
-              width: 50,
-              height: 50,
-              borderRadius: 25,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text>GKC</Text>
-          </View>
-        </View>
+        <FilterBottomSheetContent />
       </BottomSheet>
     </>
   );

@@ -11,6 +11,19 @@ export default StyleSheet.create({
   filterButtonContainer: {
     marginHorizontal: 20,
   },
+  filterContentContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  filterContentText: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   container: {
     flex: 1,
     backgroundColor: COLORS.primaryGreen,

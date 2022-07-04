@@ -1,12 +1,14 @@
 import {View} from 'react-native';
 import React, {memo, useCallback} from 'react';
 import {BottomSheetFlatList} from '@gorhom/bottom-sheet';
+import {useRecoilState} from 'recoil';
 
 import {AppButton, PlayerListItem} from 'components';
-import {players} from 'assets/data/players';
+//@ts-ignore
+import {allPlayersState} from 'atoms/Players';
+import {Player} from 'types';
 
 import styles from './styles';
-import {Player} from 'types';
 import {COLORS} from 'constants/Colors';
 
 type Props = {
@@ -14,6 +16,8 @@ type Props = {
 };
 
 const PlayersBottomSheetContent = ({handleFilters}: Props) => {
+  const [players, setPlayers] = useRecoilState<Player[]>(allPlayersState);
+
   const renderItem = useCallback(
     ({item}: {item: Player}) => <PlayerListItem player={item} />,
     [],

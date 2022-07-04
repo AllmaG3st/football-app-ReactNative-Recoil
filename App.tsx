@@ -1,18 +1,21 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {RecoilRoot} from 'recoil';
 
 import TabOneScreen from 'screens/TabOneScreen';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 type Props = {};
 
 const App = (props: Props) => {
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
-      <View style={styles.container}>
-        <TabOneScreen />
-      </View>
-    </GestureHandlerRootView>
+    <RecoilRoot>
+      <GestureHandlerRootView style={{flex: 1}}>
+        <View style={styles.container}>
+          <TabOneScreen />
+        </View>
+      </GestureHandlerRootView>
+    </RecoilRoot>
   );
 };
 
