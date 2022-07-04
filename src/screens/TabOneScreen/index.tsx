@@ -53,7 +53,58 @@ const TabOneScreen = (props: Props) => {
         index={-1}
         snapPoints={snapPoints}
         enablePanDownToClose>
-        <Text>Filters</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            width: '100%',
+            justifyContent: 'space-between',
+            padding: 10,
+          }}>
+          <View
+            style={{
+              backgroundColor: COLORS.greyLight,
+              width: 50,
+              height: 50,
+              borderRadius: 25,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text>FWD</Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: COLORS.greyLight,
+              width: 50,
+              height: 50,
+              borderRadius: 25,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text>MID</Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: COLORS.greyLight,
+              width: 50,
+              height: 50,
+              borderRadius: 25,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text>DEF</Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: COLORS.greyLight,
+              width: 50,
+              height: 50,
+              borderRadius: 25,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text>GKC</Text>
+          </View>
+        </View>
       </BottomSheet>
     </>
   );
