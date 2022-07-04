@@ -5,7 +5,7 @@ import {useRecoilState} from 'recoil';
 
 import {AppButton, PlayerListItem} from 'components';
 //@ts-ignore
-import {allPlayersState} from 'atoms/Players';
+import {filteredPlayers, allPlayersState} from 'atoms/Players';
 import {Player} from 'types';
 
 import styles from './styles';
@@ -16,7 +16,7 @@ type Props = {
 };
 
 const PlayersBottomSheetContent = ({handleFilters}: Props) => {
-  const [players, setPlayers] = useRecoilState<Player[]>(allPlayersState);
+  const [players, setPlayers] = useRecoilState<Player[]>(filteredPlayers);
 
   const renderItem = useCallback(
     ({item}: {item: Player}) => <PlayerListItem player={item} />,
