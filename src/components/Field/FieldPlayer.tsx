@@ -6,9 +6,10 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import {COLORS} from 'constants/Colors';
 import styles from './styles';
+import {Player} from 'types';
 
 type Props = {
-  player: null;
+  player: Player | null;
   position: string;
 };
 
@@ -20,7 +21,7 @@ const FieldPlayer = ({player = null, position = ''}: Props) => {
         size={35}
         color={player ? COLORS.purple : COLORS.grey}
       />
-      <Text style={styles.iconText}>{position}</Text>
+      <Text style={styles.iconText}>{player ? player.name : position}</Text>
     </View>
   );
 };

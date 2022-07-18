@@ -1,9 +1,11 @@
 import {View, Text, Image, Pressable} from 'react-native';
 import React, {memo, useCallback} from 'react';
-import {useRecoilState} from 'recoil';
+import {useRecoilState, useRecoilValue} from 'recoil';
 
 //@ts-ignore
 import {myTeamState} from 'atoms/MyTeam';
+//@ts-ignore
+import {myFormationState} from 'atoms/MyTeam';
 import {Player} from 'types';
 
 import styles from './styles';
@@ -15,6 +17,11 @@ type Props = {
 
 const PlayerListItem = ({player}: Props) => {
   const [myPlayers, setMyPlayers] = useRecoilState<Player[]>(myTeamState);
+  const myFormation = useRecoilValue<any>(myFormationState);
+
+  const numberOfPlayersOnPos = myPlayers.filter(
+    p => p.position === player.position,
+  ).length;
 
   const handlePlayerPress = useCallback(
     (player: Player) => {
@@ -23,7 +30,9 @@ const PlayerListItem = ({player}: Props) => {
           currentPlayer.filter(pl => pl.id !== player.id),
         );
       } else {
-        return setMyPlayers(currentPlayers => [...currentPlayers, player]);
+        if (numberOfPlayersOnPos < myFormation[player.position])
+          return setMyPlayers(currentPlayers => [...currentPlayers, player]);
+        return myPlayers;
       }
     },
     [myPlayers],

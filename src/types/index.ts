@@ -1,8 +1,8 @@
-enum Positions {
-  FWD,
-  MID,
-  DEF,
-  GCK,
+export enum Positions {
+  FWD = 'FWD',
+  MID = 'MID',
+  DEF = 'DEF',
+  GCK = 'GCK',
 }
 
 export type Player = {
