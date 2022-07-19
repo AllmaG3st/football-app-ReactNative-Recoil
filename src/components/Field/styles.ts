@@ -18,7 +18,9 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 12,
     padding: 2,
-    paddingHorizontal: 7,
+    paddingHorizontal: 2,
+    minWidth: 85,
+    textAlign: 'center',
   },
   positionContainer: {
     flexDirection: 'row',

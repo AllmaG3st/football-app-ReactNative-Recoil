@@ -1,5 +1,5 @@
 import {Text, View} from 'react-native';
-import React, {useCallback, useMemo, useRef} from 'react';
+import React, {Suspense, useCallback, useMemo, useRef} from 'react';
 import BottomSheet from '@gorhom/bottom-sheet';
 
 import {AppButton, AppSafeAreaView, Field, TeamStats} from 'components';
@@ -46,7 +46,9 @@ const TabOneScreen = (props: Props) => {
         index={-1}
         snapPoints={snapPoints}
         enablePanDownToClose>
-        <PlayersBottomSheetContent {...{handleFilters}} />
+        <Suspense fallback={<Text>Loading...</Text>}>
+          <PlayersBottomSheetContent {...{handleFilters}} />
+        </Suspense>
       </BottomSheet>
 
       <BottomSheet

@@ -2,7 +2,7 @@ import {atom, selector} from 'recoil';
 
 import {Player, Positions} from 'types';
 
-const positions = ['FWD', 'MID', 'DEF', 'GKC'] as Positions[];
+const positions = ['FWD', 'MID', 'DEF', 'GCK'] as Positions[];
 
 export const myTeamState = atom({
   key: 'MyTeamState',
